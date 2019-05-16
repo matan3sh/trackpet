@@ -1,72 +1,49 @@
 import { StyleSheet, Dimensions } from 'react-native';
-const  { width } = Dimensions.get('window');
+const { width } = Dimensions.get('window');
 
-export default styles = StyleSheet.create({
+export default (styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#fff'
   },
   center: {
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   space: {
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'space-between'
   },
   left: {
-    alignItems: 'flex-start',
+    alignItems: 'flex-start'
   },
   right: {
-    alignItems: 'flex-end',
+    alignItems: 'flex-end'
+  },
+  row: {
+    flexDirection: 'row'
   },
   bold: {
-    fontWeight: 'bold',
+    fontWeight: 'bold'
   },
   white: {
-    color: '#fff',
+    color: '#fff'
   },
   gray: {
-    color: '#adadad',
-  },
-  red: {
-    color: '#873232',
+    color: '#adadad'
   },
   small: {
-    fontSize: 10,
-  },
-  headerRow: {
-    flexDirection: 'row',
-    flexWrap: 'wrap'
-  },
-  footerRow: {
-    flexDirection: 'row',
-    width: width*.90,
-    alignSelf: 'center',
-    borderColor: '#d3d3d3',
-    borderWidth: 1,
-    borderRadius: 50,
-  },
-  button: {
-    marginTop: 20,
-    paddingVertical: 10,
-    alignItems: 'center',
-    borderColor: '#d3d3d3',
-    borderWidth: 1,
-    borderRadius: 5,
-    width: 200
+    fontSize: 10
   },
   input: {
-    width: width*.90,
+    width: width * 0.9,
     margin: 15,
     padding: 15,
     alignSelf: 'center',
     borderColor: '#d3d3d3',
     borderWidth: 1,
     borderRadius: 50,
-    fontSize: 16,
+    fontSize: 16
   },
   facebookButton: {
     backgroundColor: '#3b5998',
@@ -89,23 +66,23 @@ export default styles = StyleSheet.create({
   },
   postPhoto: {
     height: 250,
-    width: width,
+    width: width
   },
   roundImage: {
-    width: 40, 
+    width: 40,
     height: 40,
     borderRadius: 20,
     margin: 10,
     backgroundColor: '#adadad'
   },
   squareLarge: {
-    width: width*.33, 
+    width: width * 0.33,
     height: 125,
     margin: 1,
     backgroundColor: '#d3d3d3'
   },
   cameraButton: {
-    height: 100, 
+    height: 100,
     width: 100,
     borderRadius: 50,
     alignSelf: 'center',
@@ -130,5 +107,5 @@ export default styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 5,
     width: 125
-  },
-});
+  }
+}));
