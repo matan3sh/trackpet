@@ -191,34 +191,6 @@ class Post extends React.Component {
           source={{ uri: this.props.post.photo }}
         />
         <View style={{ flexDirection: 'row' }}>
-          {/* <TextInput
-            style={{
-              width: '25%',
-              margin: 10,
-              padding: 15,
-              fontSize: 16,
-              borderColor: '#d3d3d3',
-              borderBottomWidth: 1,
-              textAlign: 'center'
-            }}
-            value={this.props.post.pet}
-            onChangeText={text => this.props.updatePet(text)}
-            placeholder='Kind'
-          />
-          <TextInput
-            style={{
-              width: '25%',
-              margin: 10,
-              padding: 15,
-              fontSize: 16,
-              borderColor: '#d3d3d3',
-              borderBottomWidth: 1,
-              textAlign: 'center'
-            }}
-            value={this.props.post.petRace}
-            onChangeText={text => this.props.updatePetRace(text)}
-            placeholder='Race'
-          /> */}
           <Dropdown
             containerStyle={{
               width: '25%',

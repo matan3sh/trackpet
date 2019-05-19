@@ -66,7 +66,7 @@ export default (styles = StyleSheet.create({
   },
   postPhoto: {
     height: 250,
-    width: width
+    width: 350
   },
   roundImage: {
     width: 40,
