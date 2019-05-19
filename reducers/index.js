@@ -12,7 +12,7 @@ const user = (state = {}, action) => {
       return { ...state, username: action.payload };
     case 'UPDATE_BIO':
       return { ...state, bio: action.payload };
-    case 'UPDATE_PHOTO':
+    case 'UPDATE_USER_PHOTO':
       return { ...state, photo: action.payload };
     case 'GET_TOKEN':
       return { ...state, token: action.payload };
@@ -41,7 +41,7 @@ const messages = (state = {}, action) => {
 
 const post = (state = null, action) => {
   switch (action.type) {
-    case 'UPDATE_PHOTO':
+    case 'UPDATE_POST_PHOTO':
       return { ...state, photo: action.payload };
     case 'UPDATE_PET':
       return { ...state, pet: action.payload };

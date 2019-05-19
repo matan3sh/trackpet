@@ -74,16 +74,6 @@ class Home extends React.Component {
                       </View>
                     </View>
 
-                    <Text
-                      style={{
-                        marginLeft: 100,
-                        fontWeight: 'bold',
-                        alignItems: 'center'
-                      }}
-                    >
-                      {item.postPet} {item.postPetRace}
-                    </Text>
-
                     <TouchableOpacity
                       onPress={() =>
                         this.props.navigation.navigate('Comment', item)
@@ -97,6 +87,21 @@ class Home extends React.Component {
                     </TouchableOpacity>
 
                     {/* <Ionicons style={{ margin: 5 }} name='ios-flag' size={25} /> */}
+                  </View>
+                  <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                    <Image
+                      style={{ width: 15, height: 15 }}
+                      source={require('../assets/petArrow.gif')}
+                    />
+                    <Text
+                      style={{
+                        marginRight: 30,
+                        fontWeight: 'bold'
+                      }}
+                    >
+                      {' '}
+                      {item.postPet} {item.postPetRace}
+                    </Text>
                   </View>
                   <TouchableOpacity onPress={() => this.likePost(item)}>
                     <Image
@@ -145,7 +150,10 @@ class Home extends React.Component {
                         <Text>
                           {' '}
                           <Text
-                            style={{ color: '#882525', fontWeight: 'bold' }}
+                            style={{
+                              color: '#882525',
+                              fontWeight: 'bold'
+                            }}
                           >
                             {'Description: '}
                           </Text>

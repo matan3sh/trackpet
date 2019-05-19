@@ -7,7 +7,7 @@ import {
   updateDescription,
   updateLocation,
   uploadPost,
-  updatePhoto,
+  updatePostPhoto,
   updatePet,
   updatePetRace
 } from '../actions/post';
@@ -63,7 +63,7 @@ class Post extends React.Component {
       const image = await ImagePicker.launchImageLibraryAsync();
       if (!image.cancelled) {
         const url = await this.props.uploadPhoto(image);
-        this.props.updatePhoto(url);
+        this.props.updatePostPhoto(url);
       }
     }
   };
@@ -266,7 +266,7 @@ const mapDispatchToProps = dispatch => {
       uploadPost,
       updateLocation,
       uploadPhoto,
-      updatePhoto,
+      updatePostPhoto,
       updatePet,
       updatePetRace
     },

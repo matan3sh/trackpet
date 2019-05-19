@@ -17,8 +17,8 @@ export const updateDescription = input => {
   return { type: 'UPDATE_DESCRIPTION', payload: input };
 };
 
-export const updatePhoto = input => {
-  return { type: 'UPDATE_PHOTO', payload: input };
+export const updatePostPhoto = input => {
+  return { type: 'UPDATE_POST_PHOTO', payload: input };
 };
 
 export const updateLocation = input => {

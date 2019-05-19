@@ -19,8 +19,8 @@ export const updateBio = bio => {
   return { type: 'UPDATE_BIO', payload: bio };
 };
 
-export const updatePhoto = photo => {
-  return { type: 'UPDATE_PHOTO', payload: photo };
+export const updateUserPhoto = photo => {
+  return { type: 'UPDATE_USER_PHOTO', payload: photo };
 };
 
 export const login = () => {
