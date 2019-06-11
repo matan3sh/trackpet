@@ -159,6 +159,24 @@ class Post extends React.Component {
       },
       {
         value: 'Labrador'
+      },
+      {
+        value: 'Akita'
+      },
+      {
+        value: 'German Shepherd'
+      },
+      {
+        value: 'Boxer'
+      },
+      {
+        value: 'Asian'
+      },
+      {
+        value: 'British Shorthair'
+      },
+      {
+        value: 'Persian'
       }
     ];
     return (

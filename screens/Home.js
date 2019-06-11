@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../styles';
 import { connect } from 'react-redux';
+import firebase from 'firebase';
 import { bindActionCreators } from 'redux';
 import {
   Ionicons,
@@ -167,6 +168,36 @@ class Home extends React.Component {
             );
           }}
         />
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'center',
+            backgroundColor: '#233535'
+          }}
+        >
+          <Text style={{ fontWeight: 'bold', marginLeft: 5, color: '#fff' }}>
+            {'Welcome Back, '}
+          </Text>
+          <Text style={{ justifyContent: 'flex-end', color: '#E98F00' }}>
+            {this.props.user.username}
+          </Text>
+          <TouchableOpacity
+            style={{
+              margin: 10,
+              marginBottom: 5,
+              padding: 5,
+              alignItems: 'center',
+              borderColor: '#d3d3d3',
+              borderWidth: 1,
+              borderRadius: 5,
+              width: 120,
+              marginLeft: 130
+            }}
+            onPress={() => firebase.auth().signOut()}
+          >
+            <Text style={{ color: '#fff', fontWeight: 'bold' }}>Logout</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     );
   }

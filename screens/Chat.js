@@ -9,14 +9,19 @@ import {
   FlatList,
   KeyboardAvoidingView,
   TouchableOpacity,
-  Image
+  Image,
+  ActivityIndicator
 } from 'react-native';
-import { addMessage } from '../actions/message';
+import { addMessage, getMessages } from '../actions/message';
 import moment from 'moment';
 
 class Chat extends React.Component {
   state = {
     message: ''
+  };
+
+  componentDidMount = () => {
+    this.props.getMessages();
   };
 
   sendMessage = () => {
@@ -28,6 +33,8 @@ class Chat extends React.Component {
   render() {
     const { params } = this.props.navigation.state;
     const { uid } = this.props.user;
+    if (!this.props.messages)
+      return <ActivityIndicator style={styles.container} />;
     return (
       <KeyboardAvoidingView enabled behavior='padding' style={styles.container}>
         <FlatList
@@ -78,7 +85,7 @@ class Chat extends React.Component {
 }
 
 const mapDispatchToProps = dispatch => {
-  return bindActionCreators({ addMessage }, dispatch);
+  return bindActionCreators({ addMessage, getMessages }, dispatch);
 };
 
 const mapStateToProps = state => {
